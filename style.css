@@ -1,0 +1,19 @@
+.navbar{
+  background:rgba(255, 255, 255, 0.5) !important;
+  padding:10px 0px !important;
+  line-height:auto !important;
+  color:#012D54 !important;
+  border-bottom:1px solid rgba(255, 255, 255, 0.5) !important;
+  text-align:center !important;
+  position:fixed !important;
+  z-index:999999 !important;
+  width:100% !important;
+  -webkit-backdrop-filter:saturate(180%) blur(20px) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+}
+#img{
+    background-size:cover;
+    height:400px;
+    position:relative;
+    top:0px;
+  }
