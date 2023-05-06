@@ -13,6 +13,29 @@
     <!--Local-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="main.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCRnQuY6fBAA1s60dMFx-WZ9DN2WnVU1FI",
+        authDomain: "bharat-tech-mart.firebaseapp.com",
+        projectId: "bharat-tech-mart",
+        storageBucket: "bharat-tech-mart.appspot.com",
+        messagingSenderId: "188120391144",
+        appId: "1:188120391144:web:1f2b7de3f43ecfa6b2985d",
+        measurementId: "G-41Y6P50QZL"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <title>Bharat Tech Mart</title>
 </head>
 <body>
