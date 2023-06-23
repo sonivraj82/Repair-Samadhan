@@ -1,19 +1,129 @@
-.navbar{
-  background:rgba(255, 255, 255, 0.5) !important;
-  padding:10px 0px !important;
-  line-height:auto !important;
-  color:#012D54 !important;
-  border-bottom:1px solid rgba(255, 255, 255, 0.5) !important;
-  text-align:center !important;
-  position:fixed !important;
-  z-index:999999 !important;
-  width:100% !important;
-  -webkit-backdrop-filter:saturate(180%) blur(20px) !important;
-  backdrop-filter: saturate(180%) blur(20px) !important;
+/* Styles for all devices */
+body {
+  font-size: 16px;
 }
-#img{
-    background-size:cover;
-    height:400px;
-    position:relative;
-    top:0px;
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    display: none;
   }
+}
+
+/* Styles for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+    display: none;
+  }
+}
+
+/* Styles for laptops and desktops */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  #header{
+    transition: top 0.5s ease;
+    background:rgba(255, 255, 255, 0.5) !important;
+    color:#012D54 !important;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5) !important;
+    position:fixed !important;
+    top: -100px;
+    left: 0%;
+    z-index:999999 !important;
+    width:100% !important;
+    -webkit-backdrop-filter:saturate(180%) blur(20px) !important;
+    backdrop-filter: saturate(180%) blur(20px) !important;
+  }
+
+  #header-logo{
+    position: fixed;
+    top: 0px;
+    left: 10px;
+  }
+
+  #logo{
+    width: 200px;
+    height: 100px;
+  }
+
+  #cookies{
+    margin-right: 0px;
+    bottom: -100px;
+    left: 8px;
+    right: 120px;
+    position: fixed;
+    transition: bottom 0.5s ease;
+  }
+
+  #cookies-logo{
+    position: fixed;
+    bottom: -100px;
+    width: 100px;
+    transition: bottom 0.5s ease;
+    border: 1px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 57px;
+    padding-bottom: 35px;
+  }
+
+  #cookie-logo{
+    padding-top: 6px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 80px;
+  }
+
+  #cookies-p{
+    border: 1px solid black;
+    padding-left: 50px;
+    margin-left: 113px;
+    height: 120px;
+    position: absolute;
+    text-align: left;
+  }
+
+  #btn-allow{
+    font-size: large;
+    color: black;
+    background-color: white;
+    height: 55px;
+    width: 100px;
+    position: fixed;
+    bottom: -100px;
+    right: 8px;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+    transition: bottom 0.5s ease;
+  }
+
+  #btn-allow:hover{
+    color: #FF0000;
+    background-color: #39ff14;
+  }
+
+  #btn-deny{
+    font-size: inherit;
+    color: black;
+    background-color: white;
+    height: 55px;
+    width: 100px;
+    border: 1px solid black;
+    border-bottom-right-radius: 20px;
+    position: fixed;
+    right: 8px;
+    bottom: -100px;
+    transition: bottom 0.5s ease;
+  }
+
+  #btn-deny:hover{
+    color: #39FF14;
+    background-color: #FF0000;
+  }
+
+  
+}
