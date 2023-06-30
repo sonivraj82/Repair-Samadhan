@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repair Samadhan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+    <link rel="stylesheet" href="css/tab.css" media="(min-width: 768px) and (max-width: 1023px)">
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1024px)">
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/ec421d8364.js" crossorigin="anonymous"></script>
   </head>
 <body>
     <div id="header">
         <div id="header-logo">
-          <img src="logo.png" id="logo" alt="Logo">
+          <img src="assets/logo.png" id="logo" alt="Repair Samadhan Desktop Logo">
         </div>
       </div>
     
@@ -38,5 +41,41 @@
           <button id="btn-deny" onclick="hide()">Deny</button>
         </div>
       </div>
+      <script type="module">
+        function loadScript(filename) {
+          var script = document.createElement('script');
+          script.src = filename;
+          document.body.appendChild(script);
+        }
+      
+        function executeSpecificCode() {
+          var screenWidth = window.innerWidth;
+      
+          if (screenWidth <= 767) {
+            loadScript('javascript/mobile.js');
+          } else if (screenWidth >= 768 && screenWidth <= 1023) {
+            loadScript('javascript/tab.js');
+          } else {
+            loadScript('javascript/desktop.js');
+          }
+        }
+      
+        function handleViewportChange() {
+          // Clear previously loaded scripts
+          var scripts = document.querySelectorAll('script[data-category]');
+          scripts.forEach(function(script) {
+            script.remove();
+          });
+      
+          // Execute specific code based on the new viewport size
+          executeSpecificCode();
+        }
+      
+        // Initial execution
+        executeSpecificCode();
+      
+        // Add event listener for viewport changes
+        window.addEventListener('resize', handleViewportChange);
+      </script>           
 </body>
 </html>
